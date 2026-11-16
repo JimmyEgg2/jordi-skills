@@ -22,6 +22,19 @@ When the user asks to install or update these skills for the agent you are runni
 
 Done when every plugin in the table is installed exactly once on the host and the verification listing shows it.
 
+## Updating the skills
+
+**Plugin hosts** (Claude Code, Codex, Copilot) track upstream themselves: run the host's plugin update command and you are done.
+
+**Skills CLI hosts** hold *copies*, so an update is a sync against upstream. Use the same `-a <agent>` / `--global` flags as the original install on every command:
+
+1. **Refresh**: `npx skills@latest update` rewrites every installed skill from its upstream repo.
+2. **Add new**: re-run `npx skills@latest add <upstream-repo> ...` per plugin; `update` only touches skills already installed.
+3. **Prune stale**: list each upstream repo's current skill folders (`skills/**/SKILL.md`) and compare with the installed skill names. Every installed skill from one of these repos that upstream has renamed or deleted is stale; remove it with `npx skills remove <name>`. Skills renamed upstream otherwise load twice, under the old and new name.
+4. **Re-apply edits**: a copy the user edited locally is overwritten by `update`. Ask before step 1 whether they edited any, and back those files up first.
+
+Done when the installed set from these repos equals upstream's current skill list, name for name.
+
 ## Editing the marketplace
 
 - **Add a plugin** with a `github` source pointing at the upstream repo. If the repo has no `.claude-plugin/plugin.json`, set `"strict": false` and list its skill folders in `"skills"`.
