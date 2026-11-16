@@ -32,3 +32,7 @@ Add an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.j
 If the repo has no `.claude-plugin/plugin.json` (bare skills only), add `"strict": false` and `"skills": ["./path/to/skill"]`.
 
 To pin a version, add `"ref": "<tag-or-branch>"` or `"sha": "<commit>"` to the `source`.
+
+## Other local agents (Codex, Copilot, Cursor, Gemini, OpenCode, ...)
+
+Open this repo in your agent and ask it to "install these skills". [`AGENTS.md`](AGENTS.md) tells it which install path to use for its host.
