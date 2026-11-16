@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "jordi-skills",
+  "description": "My curated skill set, always pulled live from upstream GitHub.",
+  "owner": { "name": "JimmyEgg2", "url": "https://github.com/JimmyEgg2" },
+  "plugins": [
+    {
+      "name": "mattpocock-skills",
+      "description": "Matt Pocock's engineering skills: grilling, TDD, code review, domain modelling, specs/tickets.",
+      "source": { "source": "github", "repo": "mattpocock/skills" },
+      "category": "engineering"
+    },
+    {
+      "name": "ponytail",
+      "description": "Lazy senior dev mode: simplest solution that works, YAGNI, stdlib first.",
+      "source": { "source": "github", "repo": "dietrichgebert/ponytail" },
+      "category": "productivity"
+    },
+    {
+      "name": "security-audit",
+      "description": "Cloudflare's source-first security audit and vulnerability review skill.",
+      "source": { "source": "github", "repo": "cloudflare/security-audit-skill" },
+      "category": "security",
+      "strict": false,
+      "skills": ["./skills/security-audit"]
+    }
+  ]
+}
