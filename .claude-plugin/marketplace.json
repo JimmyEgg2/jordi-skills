@@ -2,27 +2,60 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "jordi-skills",
   "description": "My curated skill set, always pulled live from upstream GitHub.",
-  "owner": { "name": "JimmyEgg2", "url": "https://github.com/JimmyEgg2" },
+  "owner": {
+    "name": "JimmyEgg2",
+    "url": "https://github.com/JimmyEgg2"
+  },
   "plugins": [
     {
       "name": "mattpocock-skills",
       "description": "Matt Pocock's engineering skills: grilling, TDD, code review, domain modelling, specs/tickets.",
-      "source": { "source": "github", "repo": "mattpocock/skills" },
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      },
       "category": "engineering"
     },
     {
       "name": "ponytail",
       "description": "Lazy senior dev mode: simplest solution that works, YAGNI, stdlib first.",
-      "source": { "source": "github", "repo": "dietrichgebert/ponytail" },
+      "source": {
+        "source": "github",
+        "repo": "dietrichgebert/ponytail"
+      },
       "category": "productivity"
     },
     {
       "name": "security-audit",
       "description": "Cloudflare's source-first security audit and vulnerability review skill.",
-      "source": { "source": "github", "repo": "cloudflare/security-audit-skill" },
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/security-audit-skill"
+      },
       "category": "security",
       "strict": false,
-      "skills": ["./skills/security-audit"]
+      "skills": [
+        "./skills/security-audit"
+      ]
+    },
+    {
+      "name": "impeccable",
+      "description": "Design vocabulary for coding agents: polish, bolder, critique, audit; catches AI slop in UI.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pbakaus/impeccable.git",
+        "path": "plugin"
+      },
+      "category": "design"
+    },
+    {
+      "name": "diagram-design",
+      "description": "Editorial-quality diagrams as self-contained HTML/SVG.",
+      "source": {
+        "source": "github",
+        "repo": "cathrynlavery/diagram-design"
+      },
+      "category": "design"
     }
   ]
 }

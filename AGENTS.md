@@ -7,6 +7,10 @@ This repo is a **manifest**, not a copy: `.claude-plugin/marketplace.json` lists
 | `mattpocock-skills` | `mattpocock/skills` | full plugin (own `plugin.json`) |
 | `ponytail` | `DietrichGebert/ponytail` | full plugin, plus hooks that run Node on session start and every prompt |
 | `security-audit` | `cloudflare/security-audit-skill` | bare skill at `skills/security-audit`, no `plugin.json` |
+| `impeccable` | `pbakaus/impeccable` | full plugin in the `plugin/` subfolder (`git-subdir` source), plus hooks on session start, after tool use and on stop |
+| `diagram-design` | `cathrynlavery/diagram-design` | full plugin |
+
+**Graphify** (`Graphify-Labs/graphify`) is on the user's list but outside the marketplace: it is a Python CLI that writes its own skill. Install it with `uv tool install graphifyy` then `graphify install`, on every host. Update with `uv tool upgrade graphifyy` then `graphify install` again.
 
 ## Installing the skills into a local agent
 
@@ -18,7 +22,7 @@ When the user asks to install or update these skills for the agent you are runni
    - **Host with a native plugin manager** (Codex, Copilot): install each plugin from its *upstream* repo, following that repo's README. This marketplace uses Claude Code's format and is untested on other hosts.
    - **Any other host**: the Skills CLI, user-level: `npx skills@latest add <upstream-repo> -a <agent> --global`. For Cloudflare add `--skill security-audit`. Ponytail installs as skills only this way; its hooks need a plugin host.
 3. **Install each plugin once per host.** A plugin install and a Skills CLI copy of the same set load every skill twice; remove the older one.
-4. **Verify**: list the host's installed skills or plugins and confirm all three sets appear at upstream's current version.
+4. **Verify**: list the host's installed skills or plugins and confirm every set in the table appears at upstream's current version.
 
 Done when every plugin in the table is installed exactly once on the host and the verification listing shows it.
 

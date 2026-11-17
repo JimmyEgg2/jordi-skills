@@ -1,12 +1,17 @@
 {
   "extraKnownMarketplaces": {
     "jordi-skills": {
-      "source": { "source": "github", "repo": "JimmyEgg2/jordi-skills" }
+      "source": {
+        "source": "github",
+        "repo": "JimmyEgg2/jordi-skills"
+      }
     }
   },
   "enabledPlugins": {
     "mattpocock-skills@jordi-skills": true,
     "ponytail@jordi-skills": true,
-    "security-audit@jordi-skills": true
+    "security-audit@jordi-skills": true,
+    "impeccable@jordi-skills": true,
+    "diagram-design@jordi-skills": true
   }
 }

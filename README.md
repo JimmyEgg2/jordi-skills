@@ -7,6 +7,17 @@ A Claude Code plugin marketplace that bundles skill sets straight from their ups
 | `mattpocock-skills` | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | `ponytail` | [dietrichgebert/ponytail](https://github.com/dietrichgebert/ponytail) |
 | `security-audit` | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) |
+| `impeccable` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
+| `diagram-design` | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) |
+
+**Not a plugin, install separately:** [Graphify](https://github.com/Graphify-Labs/graphify) is a Python CLI that registers its own skill:
+
+```
+uv tool install graphifyy
+graphify install
+```
+
+**Worth a look, not included:** [Anatomy](https://github.com/wheresryan22/anatomy) explains an idea by building it as an interactive isometric SVG/WebGL figure.
 
 ## Local Claude Code CLI
 
@@ -15,6 +26,8 @@ A Claude Code plugin marketplace that bundles skill sets straight from their ups
 /plugin install mattpocock-skills@jordi-skills
 /plugin install ponytail@jordi-skills
 /plugin install security-audit@jordi-skills
+/plugin install impeccable@jordi-skills
+/plugin install diagram-design@jordi-skills
 ```
 
 ## Claude Code cloud sessions
